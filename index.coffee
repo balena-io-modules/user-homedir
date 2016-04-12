@@ -1,10 +1,11 @@
 passwdUser = require 'passwd-user'
+homedir = require 'os-homedir'
 Promise = require 'bluebird'
 
 module.exports = (username, cb) ->
 	Promise.try ->
 		if process.platform isnt 'linux' and process.platform isnt 'darwin'
-			throw new Error('Platform not supported.')
+			return homedir()
 
 		username = username ? process.env.SUDO_USER or process.env.USER
 
