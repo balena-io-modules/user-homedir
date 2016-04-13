@@ -4,6 +4,7 @@
   "description": "Platform-agnostic user home directory for any user.",
   "dependencies": {
     "bluebird": "^3.3.4",
+    "os-homedir": "^1.0.1",
     "passwd-user": "~2.0.0"
   }
 }
